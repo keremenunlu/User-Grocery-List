@@ -1,0 +1,14 @@
+user:
+  file_path: "C:/Users/u47455/PycharmProjects/pythonProjectUserList/users.json"
+  data:
+    - username: ""
+      email: ""
+      age: ""
+
+grocery:
+  file_path: "C:/Users/u47455/PycharmProjects/pythonProjectUserList/grocery.json"
+  data:
+    - id: ""
+      name: ""
+      price: ""
+

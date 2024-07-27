@@ -1,0 +1,24 @@
+user:
+  file_path: "C:/Users/u47455/PycharmProjects/pythonProjectUserList/users.db"
+  data:
+    - username: ""
+      email: ""
+      age: ""
+  queries:
+    insert: "INSERT INTO user (username, email, age) VALUES (?, ?, ?)"
+    update: "UPDATE user SET email = ?, age = ? WHERE username = ?"
+    delete: "DELETE FROM user WHERE username = ?"
+    select: "SELECT * FROM user"
+
+grocery:
+  file_path: "C:/Users/u47455/PycharmProjects/pythonProjectUserList/grocery.db"
+  data:
+    - id: ""
+      name: ""
+      price: ""
+  queries:
+    insert: "INSERT INTO grocery (id, name, price) VALUES (?, ?, ?)"
+    update: "UPDATE grocery SET name = ?, price = ? WHERE id = ?"
+    delete: "DELETE FROM grocery WHERE id = ?"
+    select: "SELECT * FROM grocery"
+
