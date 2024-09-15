@@ -8,7 +8,7 @@ def openConfig(path):
     with open(path, "r") as f:
         return yaml.safe_load(f)
 
-config = openConfig(r"C:\Users\u47455\PycharmProjects\pythonProjectUserList\config2.yaml")
+config = openConfig(r"C:\Users\enunl\PycharmProjects\User-GroceryList\config2.yaml")
 
 
 @app.route("/add/<choice>", methods=["POST"])
@@ -41,11 +41,8 @@ def update_entry(choice):
     kwargs = request.json
     value = kwargs.pop(key)
 
-    new_info = ", ".join([f"{k} = ?" for k in kwargs.keys()])
-    update_query = f"UPDATE {choice} SET {new_info} WHERE {key} = ?"
-
+    update_query = queries["update"]
     update_params = (*kwargs.values(), value)
-
     updatedRows = update(conn, update_query, update_params)
 
     if updatedRows == 0:
