@@ -5,6 +5,7 @@ user:
       email: ""
       age: ""
   queries:
+    create_table: "CREATE TABLE IF NOT EXISTS user (username TEXT PRIMARY KEY, email TEXT, age TEXT)"
     insert: "INSERT INTO user (username, email, age) VALUES (?, ?, ?)"
     update: "UPDATE user SET email = ?, age = ? WHERE username = ?"
     delete: "DELETE FROM user WHERE username = ?"
@@ -17,6 +18,7 @@ grocery:
       name: ""
       price: ""
   queries:
+    create_table: "CREATE TABLE IF NOT EXISTS grocery (id TEXT PRIMARY KEY, name TEXT, price TEXT)"
     insert: "INSERT INTO grocery (id, name, price) VALUES (?, ?, ?)"
     update: "UPDATE grocery SET name = ?, price = ? WHERE id = ?"
     delete: "DELETE FROM grocery WHERE id = ?"
